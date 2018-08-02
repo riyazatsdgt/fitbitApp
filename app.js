@@ -24,6 +24,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', index);
 // app.use('/users', users);
+// app.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
+
 app.get('/ehr/app/healthkit/fitbit/auth/:userId', function (req, res,next) {
   res.send({ status: 'done', userId: req.params.userId }).status(200);
 });
